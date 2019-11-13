@@ -15,7 +15,8 @@ function View(props) {
     <>
       <Box display="flex" justifyContent="center" p={1}>
         <Box p={1}>
-          <SpeedIcon style={{ color: cIndigo, fontSize: 35 }} />
+          {/* <SpeedIcon style={{ color: cIndigo, fontSize: 35 }} /> */}
+          {props.icon}
         </Box>
         <Paper className={props.classes}>
           <Box p={1} fontSize={22}>

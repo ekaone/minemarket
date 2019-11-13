@@ -3,13 +3,27 @@ import Grid from '@material-ui/core/Grid';
 import { Styles } from './Styles'
 import View from './View'
 import Header from './Header'
+import SpeedIcon from '@material-ui/icons/Speed';
+import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+
 
 const initialData = [
-  { id: 1, header: "Icon here", title: "Unit Measurement", subHeader: "Distance, Weight, Volume, etc..." },
-  { id: 2, header: "Icon here", title: "Quality", subHeader: "Quality control, assurance, etc..." },
-  { id: 3, header: "Icon here", title: "Equipment", subHeader: "Excavator, Truck, Barge, etc..." }
+  { id: 1, header: "Icon here", title: "Unit Measurement", subHeader: "Distance, Weight, Volume, etc...", icon: "SpeedIcon" },
+  { id: 2, header: "Icon here", title: "Quality", subHeader: "Quality control, assurance, etc...", icon: "LocalShipping" },
+  { id: 3, header: "Icon here", title: "Equipment", subHeader: "Excavator, Truck, Barge, etc...", icon: "SpeedIcon" }
 ]
 
+const setIcon = (icon) => {
+  switch (icon) {
+    case "SpeedIcon":
+      return <SpeedIcon style={{ color: "#1a237e", fontSize: 35 }} />
+      break;
+    case "LocalShipping":
+      return <LocalShippingIcon style={{ color: "#1a237e", fontSize: 35 }} />
+    default:
+      break;
+  }
+}
 
 function Dashboard() {
 
@@ -32,6 +46,7 @@ function Dashboard() {
                 title={c.title}
                 subHeader={c.subHeader} 
                 classes={classes.paper}
+                icon={setIcon(c.icon)}
               />  
             </Grid>    
           ))
