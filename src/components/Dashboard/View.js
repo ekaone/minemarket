@@ -1,13 +1,13 @@
 import React from 'react'
-import SpeedIcon from '@material-ui/icons/Speed';
-import Paper from '@material-ui/core/Paper';
+// import SpeedIcon from '@material-ui/icons/Speed';
+// import Paper from '@material-ui/core/Paper';
 import Box from "@material-ui/core/Box";
 import Typography from '@material-ui/core/Typography';
 import deepOrange from "@material-ui/core/colors/deepOrange";
-import indigo from "@material-ui/core/colors/indigo";
+// import indigo from "@material-ui/core/colors/indigo";
 
 const cDeepOrange = deepOrange[500];
-const cIndigo = indigo["A700"];
+// const cIndigo = indigo["A700"];
 
 function View(props) {
 
@@ -15,17 +15,16 @@ function View(props) {
     <>
       <Box display="flex" justifyContent="center" p={1}>
         <Box p={1}>
-          {/* <SpeedIcon style={{ color: cIndigo, fontSize: 35 }} /> */}
           {props.icon}
         </Box>
-        <Paper className={props.classes}>
+        {/* <Paper className={props.classes}> */}
           <Box p={1} fontSize={22}>
             {props.title}
             <Typography component="div">
               <Box fontStyle="italic" color={cDeepOrange} fontSize={12} m={0}>{props.subHeader}</Box>
             </Typography>
           </Box>
-        </Paper>
+        {/* </Paper> */}
       </Box>
     </>
   )
