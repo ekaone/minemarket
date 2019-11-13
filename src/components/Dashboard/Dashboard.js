@@ -5,21 +5,24 @@ import View from './View'
 import Header from './Header'
 import SpeedIcon from '@material-ui/icons/Speed';
 import LocalShippingIcon from '@material-ui/icons/LocalShipping';
+import HighQualityIcon from '@material-ui/icons/HighQuality';
 
 
 const initialData = [
   { id: 1, header: "Icon here", title: "Unit Measurement", subHeader: "Distance, Weight, Volume, etc...", icon: "SpeedIcon" },
-  { id: 2, header: "Icon here", title: "Quality", subHeader: "Quality control, assurance, etc...", icon: "LocalShipping" },
-  { id: 3, header: "Icon here", title: "Equipment", subHeader: "Excavator, Truck, Barge, etc...", icon: "SpeedIcon" }
+  { id: 2, header: "Icon here", title: "Quality", subHeader: "Quality control, assurance, etc...", icon: "HighQualityIcon" },
+  { id: 3, header: "Icon here", title: "Equipment", subHeader: "Excavator, Truck, Barge, etc...", icon: "LocalShippingIcon" }
 ]
 
 const setIcon = (icon) => {
   switch (icon) {
     case "SpeedIcon":
-      return <SpeedIcon style={{ color: "#1a237e", fontSize: 35 }} />
+      return <SpeedIcon style={{ color: "#6200ea", fontSize: 35 }} />
       break;
-    case "LocalShipping":
-      return <LocalShippingIcon style={{ color: "#1a237e", fontSize: 35 }} />
+    case "HighQualityIcon":
+      return <HighQualityIcon style={{ color: "#6200ea", fontSize: 35 }} />
+    case "LocalShippingIcon":
+      return <LocalShippingIcon style={{ color: "#6200ea", fontSize: 35 }} />
     default:
       break;
   }
