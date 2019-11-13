@@ -1,4 +1,6 @@
 import React from 'react'
+import Grid from '@material-ui/core/Grid';
+import { Styles } from './Styles'
 import View from './View'
 import Header from './Header'
 
@@ -10,13 +12,32 @@ const initialData = [
 
 
 function Dashboard() {
+
+  const classes = Styles()
+
   return (
     <>
       <Header value={"PT Bara Coal"} />
-      <View 
-        title={"Unit Measurement"}
-        subHeader={"Distance, Weight, Volume, etc..."} 
-      />
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="center"
+        className={classes.root}
+      >
+        {
+          initialData.map(c => (
+            <Grid item xs={12} sm={4}>
+              <View 
+                title={c.title}
+                subHeader={c.subHeader} 
+                classes={classes.paper}
+              />  
+            </Grid>    
+          ))
+        }
+      </Grid>
+      
     </>
   )
 }

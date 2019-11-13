@@ -1,5 +1,6 @@
 import React from 'react'
 import SpeedIcon from '@material-ui/icons/Speed';
+import Paper from '@material-ui/core/Paper';
 import Box from "@material-ui/core/Box";
 import Typography from '@material-ui/core/Typography';
 import deepOrange from "@material-ui/core/colors/deepOrange";
@@ -16,12 +17,14 @@ function View(props) {
         <Box p={1}>
           <SpeedIcon style={{ color: cIndigo, fontSize: 35 }} />
         </Box>
-        <Box p={1} fontSize={22}>
-          {props.title}
-          <Typography component="div">
-            <Box fontStyle="italic" color={cDeepOrange} fontSize={12} m={0}>{props.subHeader}</Box>
-          </Typography>
-        </Box>
+        <Paper className={props.classes}>
+          <Box p={1} fontSize={22}>
+            {props.title}
+            <Typography component="div">
+              <Box fontStyle="italic" color={cDeepOrange} fontSize={12} m={0}>{props.subHeader}</Box>
+            </Typography>
+          </Box>
+        </Paper>
       </Box>
     </>
   )
