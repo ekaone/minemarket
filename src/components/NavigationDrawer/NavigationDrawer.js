@@ -10,6 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Grid from '@material-ui/core/Grid';
+import NavigationTreeView from './NavigationTreeView'
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -30,10 +31,7 @@ function NavigationDrawer() {
 
   const classes = useStyles();
   const [state, setState] = React.useState({
-    top: false,
-    left: false,
-    bottom: false,
-    right: false,
+    left: false
   });
 
   const toggleDrawer = (side, open) => event => {
@@ -68,60 +66,24 @@ function NavigationDrawer() {
           </ListItem>
         ))}
       </List>
+      {/* <NavigationTreeView /> */}
     </div>
   );
 
-  const fullList = side => (
-    <div
-      className={classes.fullList}
-      role="presentation"
-      onClick={toggleDrawer(side, false)}
-      onKeyDown={toggleDrawer(side, false)}
-    >
-      <List>
-        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
-    </div>
-  );
+  
 
   return (
     <>
-    <Grid
-      container
-      direction="row-reverse"
-      justify="center"
-      alignItems="center"
-    >
-      <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
-      <Button onClick={toggleDrawer('right', true)}>Open Right</Button>
-      <Button onClick={toggleDrawer('top', true)}>Open Top</Button>
-      <Button onClick={toggleDrawer('bottom', true)}>Open Bottom</Button>
-      <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
-        {sideList('left')}
-      </Drawer>
-      <Drawer anchor="top" open={state.top} onClose={toggleDrawer('top', false)}>
-        {fullList('top')}
-      </Drawer>
-      <Drawer anchor="bottom" open={state.bottom} onClose={toggleDrawer('bottom', false)}>
-        {fullList('bottom')}
-      </Drawer>
-      <Drawer anchor="right" open={state.right} onClose={toggleDrawer('right', false)}>
-        {sideList('right')}
-      </Drawer>
+      <Grid
+        container
+        direction="row-reverse"
+        justify="center"
+        alignItems="center"
+      >
+        <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
+        <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+          {sideList('left')}
+        </Drawer>
       </Grid>
     </>
   )
