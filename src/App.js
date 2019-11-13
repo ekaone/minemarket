@@ -2,7 +2,8 @@ import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {
-  Dashboard
+  Dashboard,
+  NavigationDrawer
 } from './components'
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
       <MuiThemeProvider theme={theme}>
       <CssBaseline />
         
-          <Dashboard />
+          <NavigationDrawer />
         
       </MuiThemeProvider>
     </>
