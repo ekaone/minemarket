@@ -16,9 +16,9 @@ function App() {
   return (
     <>
       <MuiThemeProvider theme={theme}>
-        <CssBaseline />
+      <CssBaseline />
         
-        <Dashboard />
+          <Dashboard />
         
       </MuiThemeProvider>
     </>
