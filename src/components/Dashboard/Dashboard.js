@@ -45,7 +45,7 @@ function Dashboard() {
       >
         {
           initialData.map(c => (
-            <Grid key={c.id} item xs={12} sm={4}>
+            <Grid onClick={() => console.log(c.title)} key={c.id} item xs={12} sm={4}>
               <View 
                 title={c.title}
                 subHeader={c.subHeader} 

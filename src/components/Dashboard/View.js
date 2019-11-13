@@ -1,13 +1,9 @@
 import React from 'react'
-// import SpeedIcon from '@material-ui/icons/Speed';
-// import Paper from '@material-ui/core/Paper';
 import Box from "@material-ui/core/Box";
 import Typography from '@material-ui/core/Typography';
 import deepOrange from "@material-ui/core/colors/deepOrange";
-// import indigo from "@material-ui/core/colors/indigo";
 
 const cDeepOrange = deepOrange[500];
-// const cIndigo = indigo["A700"];
 
 function View(props) {
 
