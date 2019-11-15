@@ -10,7 +10,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Grid from '@material-ui/core/Grid';
-import NavigationTreeView from './NavigationTreeView'
+// import NavigationTreeView from './NavigationTreeView'
 
 const useStyles = makeStyles(theme => ({
   list: {
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     width: 'auto',
   },
   item: {
-    padding: theme.spacing(0, 0)
+    padding: theme.spacing(0, 2)
   },
   labelIcon: {
     marginRight: theme.spacing(2)
@@ -70,7 +70,19 @@ function NavigationDrawer() {
     </div>
   );
 
-  
+  const topComponentDrawer = () => (
+    <>
+    <List>
+        {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text} className={classes.item}>
+            <ListItemIcon className={classes.labelIcon}>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))}
+      </List>
+      <Divider />
+      </>
+  )
 
   return (
     <>
@@ -82,6 +94,7 @@ function NavigationDrawer() {
       >
         <Button onClick={toggleDrawer('left', true)}>Open Left</Button>
         <Drawer open={state.left} onClose={toggleDrawer('left', false)}>
+          {topComponentDrawer()}
           {sideList('left')}
         </Drawer>
       </Grid>
