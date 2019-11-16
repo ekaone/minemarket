@@ -3,7 +3,8 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {
   Dashboard,
-  NavigationDrawer
+  NavigationDrawer,
+  PermanentDrawer
 } from './components'
 
 function App() {
@@ -16,12 +17,12 @@ function App() {
 
   return (
     <>
-      <MuiThemeProvider theme={theme}>
-      <CssBaseline />
+    {/* <MuiThemeProvider theme={theme}>
+    <CssBaseline /> */}
         
-          <NavigationDrawer />
+      <PermanentDrawer />
         
-      </MuiThemeProvider>
+    {/* </MuiThemeProvider> */}
     </>
   );
 }
