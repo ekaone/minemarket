@@ -14,6 +14,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 // components
 import TreeView from './TreeView'
+import Icons from './Icons'
 import Profile from './Profile'
 import { 
   Dolor,
@@ -27,10 +28,10 @@ export default function PermanentDrawerLeft() {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <AppBar position="fixed" className={classes.appBar}>
+      <AppBar elevation={0} color="inherit" position="fixed" className={classes.appBar}>
         <Toolbar>
           <Typography variant="h6" noWrap>
-            {TitleAppBar}
+            {<Icons />}
           </Typography>
         </Toolbar>
       </AppBar>
@@ -44,7 +45,7 @@ export default function PermanentDrawerLeft() {
         anchor="left"
       >
         <Profile />
-        <Divider />
+        {/* <Divider /> */}
         <TreeView />
       </Drawer>
       <main className={classes.content}>

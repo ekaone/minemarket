@@ -14,6 +14,8 @@ import ForumIcon from "@material-ui/icons/Forum";
 import LocalOfferIcon from "@material-ui/icons/LocalOffer";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowRightIcon from "@material-ui/icons/ArrowRight";
+import FlightTakeoffIcon from '@material-ui/icons/FlightTakeoff';
+
 
 const useTreeItemStyles = makeStyles(theme => ({
   root: {
@@ -48,14 +50,15 @@ const useTreeItemStyles = makeStyles(theme => ({
   labelRoot: {
     display: "flex",
     alignItems: "center",
-    padding: theme.spacing(0, 0)
+    padding: theme.spacing(1, 0)
   },
   labelIcon: {
-    marginRight: theme.spacing(1)
+    marginRight: theme.spacing(2)
   },
   labelText: {
     fontWeight: "inherit",
-    flexGrow: 1
+    flexGrow: 1,
+    fontSize: 18
   }
 }));
 
@@ -75,8 +78,8 @@ function StyledTreeItem(props) {
       label={
         <div className={classes.labelRoot}>
           <LabelIcon
-            style={{ fontSize: 15 }}
-            color="inherit"
+            style={{ fontSize: 20 }}
+            color="primary"
             className={classes.labelIcon}
           />
           <Typography variant="body2" className={classes.labelText}>
@@ -132,7 +135,7 @@ export default function GmailTreeView() {
         defaultExpandIcon={<ArrowRightIcon />}
         defaultEndIcon={<div style={{ width: 24 }} />}
       >
-        <StyledTreeItem nodeId="1" labelText="All Mail" labelIcon={MailIcon} />
+        <StyledTreeItem nodeId="1" labelText="All Mail" labelIcon={FlightTakeoffIcon} />
         <StyledTreeItem nodeId="2" labelText="Trash" labelIcon={DeleteIcon} />
         <StyledTreeItem nodeId="3" labelText="Categories" labelIcon={Label}>
           <StyledTreeItem

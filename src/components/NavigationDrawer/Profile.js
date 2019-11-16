@@ -2,6 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Chip from '@material-ui/core/Chip';
 import FaceIcon from '@material-ui/icons/Face';
+import Typography from '@material-ui/core/Typography';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,6 +36,9 @@ export default function OutlinedChips() {
         onDelete={handleDelete}
         variant="outlined"
       />
+      <Typography variant="h6" noWrap>
+        Marry Dow
+      </Typography>
     </div>
   );
 }
