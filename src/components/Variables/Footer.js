@@ -1,4 +1,4 @@
-export const Footer = [
+export const VFooter = [
   { id: new Math.random(), name: "Inbox", position: "Footer", active: true },
   { id: new Math.random(), name: "Starred", position: "Footer", active: true },
   { id: new Math.random(), name: "Send Email", position: "Footer", active: true },

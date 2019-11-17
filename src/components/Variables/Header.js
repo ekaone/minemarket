@@ -1,4 +1,4 @@
-export const Header = [
+export const VHeader = [
   { id: new Math.random(), name: "Inbox", position: "Header", active: true },
   { id: new Math.random(), name: "Starred", position: "Header", active: true },
   { id: new Math.random(), name: "Send Email", position: "Header", active: true },

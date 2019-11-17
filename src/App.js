@@ -4,7 +4,13 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import {
   Dashboard,
   NavigationDrawer,
-  PermanentDrawer
+  PermanentDrawer,
+  MarryDoe,
+  JohnDoe,
+  Batman,
+  Jocker,
+  BlackLabel,
+  JohnnyWalker
 } from './components'
 
 function App() {
@@ -20,7 +26,7 @@ function App() {
     {/* <MuiThemeProvider theme={theme}>
     <CssBaseline /> */}
         
-      <PermanentDrawer />
+      <BlackLabel />
         
     {/* </MuiThemeProvider> */}
     </>

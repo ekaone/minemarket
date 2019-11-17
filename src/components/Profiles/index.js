@@ -1,0 +1,6 @@
+export { MarryDoe } from './Profiles'
+export { JohnDoe } from './Profiles'
+export { Batman } from './Profiles'
+export { JohnnyWalker } from './Profiles'
+export { BlackLabel } from './Profiles'
+export { Jocker } from './Profiles'
