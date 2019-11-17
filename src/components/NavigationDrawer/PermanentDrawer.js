@@ -21,6 +21,7 @@ import {
   TitleAppBar
 } from './Variable'
 import { useStyles } from './Styles'
+import Contents from './Contents'
 
 export default function PermanentDrawerLeft() {
   const classes = useStyles();
@@ -30,9 +31,9 @@ export default function PermanentDrawerLeft() {
       <CssBaseline />
       <AppBar elevation={0} color="inherit" position="fixed" className={classes.appBar}>
         <Toolbar>
-          <Typography variant="h6" noWrap>
+          {/* <Typography variant="h6" noWrap> */}
             {<Icons />}
-          </Typography>
+          {/* </Typography> */}
         </Toolbar>
       </AppBar>
       
@@ -50,9 +51,10 @@ export default function PermanentDrawerLeft() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.toolbar} />
-        <Typography paragraph>
+        {/* <Typography paragraph>
           {Dolor}
-        </Typography>
+        </Typography> */}
+        <Contents />
         <Typography paragraph>
           {Dolor}
         </Typography>
