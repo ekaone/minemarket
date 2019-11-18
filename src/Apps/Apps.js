@@ -10,13 +10,14 @@ import {
   Batman,
   Jocker,
   BlackLabel,
-  JohnnyWalker
+  JohnnyWalker,
+  Login
 } from '../components'
 
 function Apps() {
   return (
     <div>
-      <BlackLabel />
+      <Login />
     </div>
   )
 }
