@@ -13,7 +13,7 @@ import {
   JohnnyWalker,
   Login, 
   PageRouter,
-  Ribbon,
+  SupplyChain,
   Tabs,
   Reporting
 } from '../components'
