@@ -1,7 +1,10 @@
 import React from 'react';
 
+// components 3rd party
+import SwipeableViews from 'react-swipeable-views';
+
 // components @material-ui
-import { makeStyles } from '@material-ui/core/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -36,10 +39,16 @@ const useStyles = makeStyles(theme => ({
 
 export default function TabsHeader() {
   const classes = useStyles();
+  const theme = useTheme();
+
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
+  };
+
+  const handleChangeIndex = index => {
+    setValue(index);
   };
 
   return (
@@ -63,6 +72,11 @@ export default function TabsHeader() {
           <Tab label="Item Seven" icon={<ThumbUp />} {...a11yProps(6)} />
         </Tabs>
       </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
       <TabPanel value={value} index={0}>
         Item One
       </TabPanel>
@@ -81,9 +95,10 @@ export default function TabsHeader() {
       <TabPanel value={value} index={5}>
         Item Six
       </TabPanel>
-      <TabPanel value={value} index={6}>
+      <TabPanel value={value} index={6} dir={theme.direction}>
         <Ribbon />
       </TabPanel>
+      </SwipeableViews>
     </div>
   );
 }
