@@ -17,7 +17,7 @@ export default function TabPanel(props) {
       aria-labelledby={`scrollable-force-tab-${index}`}
       {...other}
     >
-      <Box p={1}>{children}</Box>
+      <Box style={{ overflowY: 'hidden', overflowX: 'hidden' }} p={1}>{children}</Box>
     </Typography>
   );
 }

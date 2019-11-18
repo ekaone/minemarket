@@ -31,8 +31,8 @@ import Grid from '@material-ui/core/Grid';
 const useStyles = makeStyles(theme => ({
   root: {
     width: 'fit-content',
-    border: `1px solid ${theme.palette.divider}`,
-    borderRadius: theme.shape.borderRadius,
+    // border: `1px solid ${theme.palette.divider}`,
+    // borderRadius: theme.shape.borderRadius,
     // backgroundColor: theme.palette.background.paper,
     color: theme.palette.text.secondary,
     '& svg': {
@@ -45,14 +45,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function ToolBar() {
+export default function ToolBar(props) {
   const classes = useStyles();
 
   return (
     <>
       <Grid container alignItems="center" className={classes.root}>
-        <AirportShuttleIcon onClick={() => console.log("Airport")} />
-        <LocalShippingIcon onClick={() => console.log("Local shipping")} />
+        <AirportShuttleIcon onClick={props.handlerAirPort} />
+        <LocalShippingIcon onClick={props.handlerLocalShipping} />
         <TrendingUpIcon />
         <EmojiPeopleIcon />
         <FlightTakeoffIcon />

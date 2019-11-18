@@ -10,7 +10,7 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 
 // components units
-import Ribbon from '../Ribbon'
+import SupplyChain from '../SupplyChain'
 import TabPanel from './TabPanel'
 import Reporting from '../Reporting'
 
@@ -70,7 +70,7 @@ export default function TabsHeader() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0}>
-          <Ribbon />
+          <SupplyChain />
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two

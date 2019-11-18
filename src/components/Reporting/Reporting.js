@@ -9,7 +9,7 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   root: {
-    width: '60%',
+    width: '80%',
     overflowX: 'auto',
   },
   table: {
