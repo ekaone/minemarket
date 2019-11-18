@@ -26,7 +26,7 @@ import TramIcon from '@material-ui/icons/Tram';
  * @material-ui/core
  */
 import Grid from '@material-ui/core/Grid';
-import Divider from '@material-ui/core/Divider';
+// import Divider from '@material-ui/core/Divider';
 
 const useStyles = makeStyles(theme => ({
   root: {
