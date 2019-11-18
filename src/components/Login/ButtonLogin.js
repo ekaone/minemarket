@@ -15,10 +15,10 @@ export default function ContainedButtons() {
   const classes = useStyles();
 
   return (
-    <div>
+    <>
       <Button variant="contained" color="primary" className={classes.button}>
         Login
       </Button>
-    </div>
+    </>
   );
 }

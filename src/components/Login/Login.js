@@ -18,6 +18,7 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Grid from '@material-ui/core/Grid';
 import FormLogin from './FormLogin'
 import ButtonLogin from './ButtonLogin'
+import ForgotPassword from './ForgotPassword'
 
 const useStyles = makeStyles(theme => ({
   card: {
@@ -83,10 +84,11 @@ export default function Login() {
           This impressive paella is a perfect party dish and a fun meal to cook together with your
           guests. Add 1 cup of frozen peas along with the mussels, if you like.
         </Typography> */}
-        <div>
-          <ButtonLogin />
-        </div>
       </CardContent>
+      <CardActions disableSpacing>
+        <ButtonLogin />
+        <ForgotPassword />
+      </CardActions>
     </Card>
     </Grid>
     </Grid>
