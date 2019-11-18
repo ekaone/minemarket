@@ -11,13 +11,14 @@ import {
   Jocker,
   BlackLabel,
   JohnnyWalker,
-  Login
+  Login, 
+  PageRouter
 } from '../components'
 
 function Apps() {
   return (
     <div>
-      <Login />
+      <PageRouter />
     </div>
   )
 }
