@@ -6,7 +6,7 @@ export { default as Login } from './PageLogin'
 export { default as PageRouter } from './PageRouter'
 export { default as Ribbon } from './Ribbon'
 export { default as Tabs } from './Tabs'
-
+export { default as Reporting } from './Reporting'
 
 // avatar
 export { MarryDoe } from './Profiles'

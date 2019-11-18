@@ -14,7 +14,8 @@ import {
   Login, 
   PageRouter,
   Ribbon,
-  Tabs
+  Tabs,
+  Reporting
 } from '../components'
 
 function Apps() {

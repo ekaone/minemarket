@@ -8,17 +8,11 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import PhoneIcon from '@material-ui/icons/Phone';
-import FavoriteIcon from '@material-ui/icons/Favorite';
-import PersonPinIcon from '@material-ui/icons/PersonPin';
-import HelpIcon from '@material-ui/icons/Help';
-import ShoppingBasket from '@material-ui/icons/ShoppingBasket';
-import ThumbDown from '@material-ui/icons/ThumbDown';
-import ThumbUp from '@material-ui/icons/ThumbUp';
 
 // components units
 import Ribbon from '../Ribbon'
 import TabPanel from './TabPanel'
+import Reporting from '../Reporting'
 
 function a11yProps(index) {
   return {
@@ -64,10 +58,10 @@ export default function TabsHeader() {
           <Tab style={{paddingLeft: 0, paddingRight: 0}} label="Supply Chain" {...a11yProps(0)} />
           <Tab label="Quality"  {...a11yProps(1)} />
           <Tab label="Material" {...a11yProps(2)} />
-          <Tab label="Organtizations" {...a11yProps(3)} />
+          <Tab label="Reporting" {...a11yProps(3)} />
           <Tab label="Contracts" {...a11yProps(4)} />
           <Tab label="Transport" {...a11yProps(5)} />
-          <Tab label="Reporting" {...a11yProps(6)} />
+          <Tab label="Organization" {...a11yProps(6)} />
         </Tabs>
       </AppBar>
       <SwipeableViews
@@ -76,7 +70,7 @@ export default function TabsHeader() {
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0}>
-          Item One
+          <Ribbon />
         </TabPanel>
         <TabPanel value={value} index={1}>
           Item Two
@@ -85,7 +79,7 @@ export default function TabsHeader() {
           Item Three
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item Four
+          <Reporting />
         </TabPanel>
         <TabPanel value={value} index={4}>
           Item Five
@@ -94,7 +88,7 @@ export default function TabsHeader() {
           Item Six
         </TabPanel>
         <TabPanel value={value} index={6} dir={theme.direction}>
-          <Ribbon />
+          Item 6
         </TabPanel>
       </SwipeableViews>
     </div>
