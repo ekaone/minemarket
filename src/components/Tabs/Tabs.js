@@ -20,8 +20,6 @@ import ThumbUp from '@material-ui/icons/ThumbUp';
 import Ribbon from '../Ribbon'
 import TabPanel from './TabPanel'
 
-
-
 function a11yProps(index) {
   return {
     id: `scrollable-force-tab-${index}`,
@@ -77,27 +75,27 @@ export default function TabsHeader() {
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-      <TabPanel value={value} index={0}>
-        Item One
-      </TabPanel>
-      <TabPanel value={value} index={1}>
-        Item Two
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
-      <TabPanel value={value} index={3}>
-        Item Four
-      </TabPanel>
-      <TabPanel value={value} index={4}>
-        Item Five
-      </TabPanel>
-      <TabPanel value={value} index={5}>
-        Item Six
-      </TabPanel>
-      <TabPanel value={value} index={6} dir={theme.direction}>
-        <Ribbon />
-      </TabPanel>
+        <TabPanel value={value} index={0}>
+          Item One
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          Item Two
+        </TabPanel>
+        <TabPanel value={value} index={2}>
+          Item Three
+        </TabPanel>
+        <TabPanel value={value} index={3}>
+          Item Four
+        </TabPanel>
+        <TabPanel value={value} index={4}>
+          Item Five
+        </TabPanel>
+        <TabPanel value={value} index={5}>
+          Item Six
+        </TabPanel>
+        <TabPanel value={value} index={6} dir={theme.direction}>
+          <Ribbon />
+        </TabPanel>
       </SwipeableViews>
     </div>
   );
