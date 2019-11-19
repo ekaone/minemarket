@@ -4,7 +4,8 @@ import React from 'react'
 
 import {
   CButton,
-  CAppBar
+  CAppBar,
+  CTabs
 } from '../componentstyles'
 
 import {
@@ -28,7 +29,7 @@ function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <CButton />
+      <CAppBar />
     </>
   )
 }

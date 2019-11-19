@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
 import Button from '@material-ui/core/Button';
 import purple from '@material-ui/core/colors/purple';
 import red from '@material-ui/core/colors/red';
@@ -32,12 +33,26 @@ const theme = createMuiTheme({
   },
 });
 
+const styles = { 
+  textTransform: 'none',
+  minWidth: 25,
+  background: 'blue', 
+  color: 'white',
+  padding: 1,
+  margin: 0,
+  borderRadius: 5
+}
+
 function CButton() {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <Button>Overrides</Button>
-      </ThemeProvider>
+      {/* <ThemeProvider theme={theme}> */}
+      <CssBaseline />
+        <Button size="small" variant="contained" style={styles}>AS asdljflasd aklsdjfklasdj</Button>
+        <div></div>
+        <div>d</div>
+        <Button size="small" variant="contained" style={styles}>AS asdljflasd aklsdjfklasdj</Button>
+      {/* </ThemeProvider> */}
     </>
   );
 }
