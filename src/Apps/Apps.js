@@ -1,6 +1,11 @@
 import React from 'react'
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
+
+import {
+  CButton
+} from '../componentstyles'
+
 import {
   Dashboard,
   NavigationDrawer,
@@ -22,7 +27,7 @@ function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <Tabs />
+      <CButton />
     </>
   )
 }

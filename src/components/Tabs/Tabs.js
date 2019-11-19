@@ -8,11 +8,15 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
+import CssBaseline from '@material-ui/core/CssBaseline';
+
 
 // components units
 import SupplyChain from '../SupplyChain'
 import TabPanel from './TabPanel'
 import Reporting from '../Reporting'
+
+
 
 function a11yProps(index) {
   return {
@@ -44,6 +48,7 @@ export default function TabsHeader() {
   };
 
   return (
+    <>
     <div className={classes.root}>
       <AppBar position="static" color="default">
         <Tabs
@@ -73,24 +78,25 @@ export default function TabsHeader() {
           <SupplyChain />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item Two
+          Quality
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item Three
+          Material
         </TabPanel>
         <TabPanel value={value} index={3}>
           <Reporting />
         </TabPanel>
         <TabPanel value={value} index={4}>
-          Item Five
+          Contracts
         </TabPanel>
         <TabPanel value={value} index={5}>
-          Item Six
+          Transport
         </TabPanel>
         <TabPanel value={value} index={6} dir={theme.direction}>
-          Item 6
+          Organization
         </TabPanel>
       </SwipeableViews>
     </div>
+    </>
   );
 }
