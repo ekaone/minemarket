@@ -39,17 +39,38 @@ const theme = createMuiTheme({
 });
 
 const stylesToolbar = {
-  paddingLeft: 1,
-  paddingTop: 0
+  paddingLeft: 1
 }
 
 const stylesMenuIcon = {
+  position: 'absolute',
   fontSize: 20,
-  color: 'yellow'
+  color: 'yellow',
+  top: 2,
+  left: 2,
+  '&:hover': {
+    background: 'red',
+}
+}
+
+const stylesMenuIcon2 = { 
+  position: 'absolute', 
+  top: 2, 
+  right: 2,
+  fontSize: 20,
+  color: 'yellow', 
 }
 
 const stylesAppBar = {
-  height: 45
+  height: 38
+}
+
+const stylesTypography = {
+  position: 'absolute', 
+  top: 2, 
+  left: 30,
+  fontSize: 16,
+  color: 'yellow', 
 }
 
 export default function CAppBar() {
@@ -57,18 +78,19 @@ export default function CAppBar() {
   return (
     <>
     {/* <ThemeProvider theme={theme}> */}
-    <AppBar>
+    {/* <CssBaseline /> */}
+    <AppBar style={stylesAppBar}>
       <Toolbar variant="dense" style={stylesToolbar}>
         {/* <IconButton edge="start" color="inherit" aria-label="menu"> */}
-        <Box display="flex" justifyContent="center" border={1}>
+        {/* <Box display="flex" justifyContent="center" border={1}> */}
           <MenuIcon edge="start" style={stylesMenuIcon} />
-        </Box>
+        {/* </Box> */}
         {/* </IconButton> */}
-        <Typography>
+        <Typography style={stylesTypography}>
           News News
         </Typography>
         
-          <MenuIcon style={{ position: 'absolute', top: '0px', right: '0px' }} />
+          <MenuIcon style={stylesMenuIcon2} />
         {/* <Button color="inherit">Login</Button> */}
       </Toolbar>
     </AppBar>
