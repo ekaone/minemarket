@@ -6,7 +6,8 @@ import {
   CButton,
   CAppBar,
   CTabs,
-  CDrawer
+  CDrawer,
+  CListItem
 } from '../componentstyles'
 
 import {
@@ -23,14 +24,15 @@ import {
   PageRouter,
   SupplyChain,
   Tabs,
-  Reporting
+  Reporting,
+  ChartLine
 } from '../components'
 
 function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <CDrawer />
+      <CListItem />
     </>
   )
 }
