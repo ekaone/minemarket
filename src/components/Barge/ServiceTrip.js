@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
+
 import { makeStyles, createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
 import { green } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
+import {
+  MuiPickersUtilsProvider,
+  KeyboardTimePicker,
+  KeyboardDatePicker,
+  DatePicker,
+  TimePicker,
+} from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
+import 'date-fns';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -49,8 +59,10 @@ const currencies = [
   },
 ];
 
+
 export default function ServiceTrip() {
   const classes = useStyles();
+  const [selectedDate, setSelectedDate] = React.useState(new Date())
   const [values, setValues] = useState({
     serviceTrip: '',
     loadingShipment: '',
@@ -79,13 +91,19 @@ export default function ServiceTrip() {
     currency: ''
   })
 
-  const handlerChange = prop => event => {
+  const handleDateChange = date => {
+    setSelectedDate(date);
+  };
+
+  const handlerChange = (prop) => event => {
     setValues({ ...values, [prop]: event.target.value })
   }
 
   const handleServiceTrip = () => {
-    console.log(values)
+    setValues({ ...values, startDate: selectedDate })
   }
+
+  console.log(selectedDate)
 
   return (
     <>
@@ -105,13 +123,36 @@ export default function ServiceTrip() {
             value={values.loadingShipment}
             onChange={handlerChange('loadingShipment')}
           />
-          <TextField
+          {/* <TextField
             className={classes.margin}
             label="Start Date"
             id="mui-theme-provider-standard-input"
             value={values.startDate}
             onChange={handlerChange('startDate')}
-          />
+          /> */}
+          <MuiPickersUtilsProvider utils={DateFnsUtils}>
+            <KeyboardDatePicker
+              margin="normal"
+              id="date-picker-dialog"
+              label="Start Date"
+              format="MM/dd/yyyy"
+              value={selectedDate}
+              onChange={handleDateChange}
+              KeyboardButtonProps={{
+                'aria-label': 'change date',
+              }}
+            />
+            <KeyboardTimePicker
+              margin="normal"
+              id="time-picker"
+              label="Start Time"
+              value={selectedDate}
+              onChange={handleDateChange}
+              KeyboardButtonProps={{
+                'aria-label': 'change time',
+              }}
+            />
+          </MuiPickersUtilsProvider>
           <div>
             <TextField
               className={classes.margin}
@@ -231,7 +272,7 @@ export default function ServiceTrip() {
             <TextField
               id="standard-select-currency"
               select
-              label="Select"
+              label="Currency"
               className={classes.textField}
               value={values.currency}
               onChange={handlerChange('currency')}
@@ -240,7 +281,6 @@ export default function ServiceTrip() {
                   className: classes.menu,
                 },
               }}
-              helperText="Please select your currency"
               margin="normal"
             >
               {currencies.map(option => (
