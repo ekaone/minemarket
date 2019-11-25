@@ -9,6 +9,7 @@ export { default as Tabs } from './Tabs'
 export { default as Reporting } from './Reporting'
 export { default as ChartLine } from './Chart'
 // export { default as ChartBar } from './Chart'
+export { default as Barge } from './Barge'
 
 // avatar
 export { MarryDoe } from './Profiles'

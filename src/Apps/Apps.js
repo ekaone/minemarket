@@ -25,14 +25,15 @@ import {
   SupplyChain,
   Tabs,
   Reporting,
-  ChartLine
+  ChartLine,
+  Barge
 } from '../components'
 
 function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <CListItem />
+      <Barge />
     </>
   )
 }
