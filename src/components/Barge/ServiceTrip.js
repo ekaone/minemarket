@@ -25,9 +25,23 @@ export default function ServiceTrip() {
   const classes = useStyles();
   const [values, setValues] = useState({
     serviceTrip: '',
+    loadingShipment: '',
+    startDate: '',
     bargeName: '',
+    plannedProduct: '',
+    endDate: '',
+    tug: '',
+    despatchOrder: '',
+    shipment: '',
+    despatchNumber: '',
+    product: '',
+    bulkVessel: '',
     captain: '',
-    chiefEngineer: ''
+    status: '',
+    despatchOrder2: '',
+    chiefEngineer: '',
+    serviceTrip: '',
+    nominatedProduct: ''
   })
 
   const handlerChange = prop => event => {
@@ -51,25 +65,39 @@ export default function ServiceTrip() {
           />
           <TextField
             className={classes.margin}
-            label="Barge Name"
+            label="Loading Shipment"
             id="mui-theme-provider-standard-input"
-            value={values.bargeName}
-            onChange={handlerChange('bargeName')}
+            value={values.loadingShipment}
+            onChange={handlerChange('loadingShipment')}
+          />
+          <TextField
+            className={classes.margin}
+            label="Start Date"
+            id="mui-theme-provider-standard-input"
+            value={values.startDate}
+            onChange={handlerChange('startDate')}
           />
           <div>
             <TextField
               className={classes.margin}
-              label="Captain"
+              label="Barge Name"
               id="mui-theme-provider-standard-input"
-              value={values.captain}
-              onChange={handlerChange('captain')}
+              value={values.bargeName}
+              onChange={handlerChange('bargeName')}
             />
             <TextField
               className={classes.margin}
-              label="Chief Engineer"
+              label="Planned Product"
               id="mui-theme-provider-standard-input"
-              value={values.chiefEngineer}
-              onChange={handlerChange('chiefEngineer')}
+              value={values.plannedProduct}
+              onChange={handlerChange('plannedProduct')}
+            />
+            <TextField
+              className={classes.margin}
+              label="End Date"
+              id="mui-theme-provider-standard-input"
+              value={values.endDate}
+              onChange={handlerChange('endDate')}
             />
           </div>
         </ThemeProvider>
@@ -83,11 +111,10 @@ export default function ServiceTrip() {
           Save
         </Button>
       </div>
-      <div>
-        <pre>
-          {JSON.stringify(values, 2, null)}
-        </pre>
-      </div>
+      <hr />
+      <pre>
+        {JSON.stringify(values, 2, null)}
+      </pre>
     </>
   );
 }
