@@ -7,6 +7,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid'
 
 //components assets
 import CharLine from '../../assets/images/chart_line.PNG'
@@ -41,14 +42,21 @@ export default function Configuration() {
           </Typography>
         </CardContent>
       </CardActionArea>
-      {/* <CardActions>
+      <Grid
+        container
+        direction="row"
+        justify="center"
+        alignItems="flex-end"
+      >
+      <CardActions>
         <Button size="small" color="primary">
           Share
         </Button>
         <Button size="small" color="primary">
           Learn More
         </Button>
-      </CardActions> */}
+      </CardActions>
+      </Grid>
     </Card>
   );
 }

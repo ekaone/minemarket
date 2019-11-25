@@ -10,8 +10,6 @@ import {
   MuiPickersUtilsProvider,
   KeyboardTimePicker,
   KeyboardDatePicker,
-  DatePicker,
-  TimePicker,
 } from '@material-ui/pickers';
 import DateFnsUtils from '@date-io/date-fns';
 import 'date-fns';
@@ -123,13 +121,6 @@ export default function ServiceTrip() {
             value={values.loadingShipment}
             onChange={handlerChange('loadingShipment')}
           />
-          {/* <TextField
-            className={classes.margin}
-            label="Start Date"
-            id="mui-theme-provider-standard-input"
-            value={values.startDate}
-            onChange={handlerChange('startDate')}
-          /> */}
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
               margin="normal"

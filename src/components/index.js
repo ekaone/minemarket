@@ -10,6 +10,7 @@ export { default as Reporting } from './Reporting'
 export { default as ChartLine } from './Chart'
 // export { default as ChartBar } from './Chart'
 export { default as Barge } from './Barge'
+export { default as Explorer } from './Explorer'
 
 // avatar
 export { MarryDoe } from './Profiles'

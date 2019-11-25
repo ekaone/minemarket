@@ -26,14 +26,15 @@ import {
   Tabs,
   Reporting,
   ChartLine,
-  Barge
+  Barge,
+  Explorer
 } from '../components'
 
 function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <Barge />
+      <Explorer />
     </>
   )
 }
