@@ -4,6 +4,7 @@ import { ThemeProvider } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
 import { green } from '@material-ui/core/colors';
 import Button from '@material-ui/core/Button';
+import MenuItem from '@material-ui/core/MenuItem';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -12,6 +13,14 @@ const useStyles = makeStyles(theme => ({
   },
   margin: {
     margin: theme.spacing(1),
+  },
+  menu: {
+    width: 200,
+  },
+  textField: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
+    width: 200,
   },
 }));
 
@@ -217,6 +226,29 @@ export default function ServiceTrip() {
                 value={values.nominatedProduct}
                 onChange={handlerChange('nominatedProduct')}
               />
+          </div>
+          <div>
+            <TextField
+              id="standard-select-currency"
+              select
+              label="Select"
+              className={classes.textField}
+              value={values.currency}
+              onChange={handlerChange('currency')}
+              SelectProps={{
+                MenuProps: {
+                  className: classes.menu,
+                },
+              }}
+              helperText="Please select your currency"
+              margin="normal"
+            >
+              {currencies.map(option => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
           </div>
         </ThemeProvider>
       </div>
