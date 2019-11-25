@@ -21,27 +21,53 @@ const theme = createMuiTheme({
   },
 });
 
+const currencies = [
+  {
+    value: 'USD',
+    label: '$',
+  },
+  {
+    value: 'EUR',
+    label: '€',
+  },
+  {
+    value: 'BTC',
+    label: '฿',
+  },
+  {
+    value: 'JPY',
+    label: '¥',
+  },
+];
+
 export default function ServiceTrip() {
   const classes = useStyles();
   const [values, setValues] = useState({
     serviceTrip: '',
     loadingShipment: '',
     startDate: '',
+
     bargeName: '',
     plannedProduct: '',
     endDate: '',
+
     tug: '',
     despatchOrder: '',
     shipment: '',
+
     despatchNumber: '',
     product: '',
     bulkVessel: '',
+
     captain: '',
     status: '',
     despatchOrder2: '',
+
     chiefEngineer: '',
-    serviceTrip: '',
-    nominatedProduct: ''
+    serviceTrip2: '',
+    nominatedProduct: '',
+
+    currency: ''
   })
 
   const handlerChange = prop => event => {
@@ -99,6 +125,98 @@ export default function ServiceTrip() {
               value={values.endDate}
               onChange={handlerChange('endDate')}
             />
+          </div>
+          <div>
+            <TextField
+                className={classes.margin}
+                label="Tug"
+                id="mui-theme-provider-standard-input"
+                value={values.tug}
+                onChange={handlerChange('tug')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Despatch Order"
+                id="mui-theme-provider-standard-input"
+                value={values.despatchOrder}
+                onChange={handlerChange('despatchOrder')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Shipment"
+                id="mui-theme-provider-standard-input"
+                value={values.shipment}
+                onChange={handlerChange('shipment')}
+              />
+          </div>
+          <div>
+            <TextField
+                className={classes.margin}
+                label="Despatch Number"
+                id="mui-theme-provider-standard-input"
+                value={values.despatchNumber}
+                onChange={handlerChange('despatchNumber')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Product"
+                id="mui-theme-provider-standard-input"
+                value={values.product}
+                onChange={handlerChange('product')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Bulk Vessel"
+                id="mui-theme-provider-standard-input"
+                value={values.bulkVessel}
+                onChange={handlerChange('bulkVessel')}
+              />
+          </div>
+          <div>
+            <TextField
+                className={classes.margin}
+                label="Captain"
+                id="mui-theme-provider-standard-input"
+                value={values.captain}
+                onChange={handlerChange('captain')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Status"
+                id="mui-theme-provider-standard-input"
+                value={values.status}
+                onChange={handlerChange('status')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Despatch Order 2"
+                id="mui-theme-provider-standard-input"
+                value={values.despatchOrder2}
+                onChange={handlerChange('despatchOrder2')}
+              />
+          </div>
+          <div>
+            <TextField
+                className={classes.margin}
+                label="Chief Engineer"
+                id="mui-theme-provider-standard-input"
+                value={values.chiefEngineer}
+                onChange={handlerChange('chiefEngineer')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Service Trip 2"
+                id="mui-theme-provider-standard-input"
+                value={values.serviceTrip2}
+                onChange={handlerChange('serviceTrip2')}
+              />
+              <TextField
+                className={classes.margin}
+                label="Nominated Product"
+                id="mui-theme-provider-standard-input"
+                value={values.nominatedProduct}
+                onChange={handlerChange('nominatedProduct')}
+              />
           </div>
         </ThemeProvider>
       </div>
