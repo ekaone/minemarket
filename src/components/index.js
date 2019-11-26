@@ -12,6 +12,7 @@ export { default as ChartLine } from './Chart'
 export { default as Barge } from './Barge'
 export { default as Explorer } from './Explorer'
 export { default as Keyboard } from './Keyboard'
+export { default as Helpers } from './Helpers'
 
 // avatar
 export { MarryDoe } from './Profiles'

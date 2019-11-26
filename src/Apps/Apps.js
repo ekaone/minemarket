@@ -1,4 +1,11 @@
 import React from 'react'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
 // import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 // import CssBaseline from '@material-ui/core/CssBaseline';
 
@@ -28,14 +35,18 @@ import {
   ChartLine,
   Barge,
   Explorer,
-  Keyboard
+  Keyboard,
+  Helpers
 } from '../components'
 
 function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <Barge />
+      <Router>
+        <Route exact path="/page-router" component={PageRouter} />
+        <Route exact path="/explorer" component={Explorer} />
+      </Router>
     </>
   )
 }

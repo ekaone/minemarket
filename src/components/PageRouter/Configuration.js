@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
+
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -50,10 +52,7 @@ export default function Configuration() {
       >
       <CardActions>
         <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+          <Link to='/explorer'>Learn More</Link>
         </Button>
       </CardActions>
       </Grid>

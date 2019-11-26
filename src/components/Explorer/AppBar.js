@@ -1,10 +1,14 @@
 import React from 'react';
+import { Link, useHistory } from 'react-router-dom'
+
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import SearchIcon from '@material-ui/icons/Search';
+import IconButton from '@material-ui/core/IconButton';
+import HomeIcon from '@material-ui/icons/Home';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -57,23 +61,35 @@ const useStyles = makeStyles(theme => ({
       },
     },
   },
+  menuHome: {
+    marginRight: theme.spacing(2),
+  },
 }));
+
+
 
 export default function ExplorerAppBar() {
   const classes = useStyles();
+
+  let history = useHistory();
+
+  const routeChange = () => {
+    let path = `/page-router`;
+    history.push(path);
+  }
 
   return (
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton
+          <IconButton
             edge="start"
-            className={classes.menuButton}
+            className={classes.menuHome}
             color="inherit"
-            aria-label="open drawer"
+            aria-label="back home"
           >
-            <MenuIcon />
-          </IconButton> */}
+            <HomeIcon onClick={routeChange} />
+          </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Mine market Explorer
           </Typography>

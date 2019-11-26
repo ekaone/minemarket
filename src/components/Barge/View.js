@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+  Link
+} from "react-router-dom";
 
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -48,6 +51,7 @@ export default function View() {
   const classes = useStyles();
 
   return (
+    <>
     <div className={classes.root}>
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
@@ -153,5 +157,6 @@ export default function View() {
         </Typography>
       </main>
     </div>
+    </>
   );
 }
