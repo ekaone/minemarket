@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import Card from '@material-ui/core/Card';
@@ -18,6 +19,8 @@ import MoreVertIcon from '@material-ui/icons/MoreVert';
 import Box from '@material-ui/core/Box';
 import Badge from '@material-ui/core/Badge';
 import MailIcon from '@material-ui/icons/Mail';
+
+
 
 
 const useStyles = makeStyles(theme => ({
@@ -43,7 +46,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Barge() {
+export default function View(props) {
   const classes = useStyles();
   const [expanded, setExpanded] = React.useState(false);
 
@@ -56,7 +59,7 @@ export default function Barge() {
       <CardHeader
         avatar={
           <Avatar aria-label="recipe" className={classes.avatar}>
-            R
+            {props.avatar}
           </Avatar>
         }
         action={
@@ -64,23 +67,23 @@ export default function Barge() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2016"
+        title={props.title}
+        subheader={props.subheader}
       />
       
       <CardContent>
         <Typography variant="body2" color="textSecondary" component="p">
-          This impressive paella is a perfect party dish and a fun 
+          {props.content} 
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <Badge badgeContent={99} color="primary">
+          <Badge badgeContent={props.badge1} color="primary">
             <FavoriteIcon />
           </Badge>
         </IconButton>
         <IconButton aria-label="share">
-          <Badge badgeContent={10} color="secondary">
+          <Badge badgeContent={props.badge2} color="secondary">
             <ShareIcon />
           </Badge>
         </IconButton>
@@ -97,10 +100,9 @@ export default function Barge() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>Method:</Typography>
+          <Typography paragraph>{props.collapsetitle}</Typography>
           <Typography paragraph>
-            Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10
-            minutes.
+            {props.collapsecontent}
           </Typography>
         </CardContent>
       </Collapse>

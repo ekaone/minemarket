@@ -1,7 +1,24 @@
-export const Explorer = [
-  { id: 1, name: 'Barge', avatar: 'R' }
-  { id: 1, name: 'Shipment',  }
-  { id: 1, name: 'Barge',  }
-  { id: 1, name: 'Barge',  }
-  { id: 1, name: 'Barge',  }
+export const DataExplorer = [
+  { id: 1, title: 'Diagram Static', avatar: 'D', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '4', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 2, title: 'Audit', avatar: 'A', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '5', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 3, title: 'Benchmark', avatar: 'B', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '5', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 4, title: 'Contract', avatar: 'C', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '5', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 5, title: 'Despatch Order', avatar: 'DO', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '5', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 6, title: 'Invoice', avatar: 'I', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '5', badge2: '10', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  { id: 7, title: 'Invoice Batch Processing', avatar: 'IB', subheader: 'September 14, 2020', content: 'This impressive mining market ', badge1: '10', badge2: '5', collapseTitle: 'Method:', collapseContent: 'Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 10' },
+  // { id: 8, title: 'Payment', avatar: 'P', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 9, title: 'Currency Exchange', avatar: 'CE', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 10, title: 'Pricing', avatar: 'P', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 11, title: 'Hedging', avatar: 'H', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 12, title: 'Transaction', avatar: 'T', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 13, title: 'Sample', avatar: 'S', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 14, title: 'Shipment', avatar: 'SP', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 15, title: 'Train', avatar: 'T', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 16, title: 'Barge', avatar: 'B', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 17, title: 'Truck Despatch', avatar: 'TD', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 18, title: 'Lot Despatch', avatar: 'LD', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 19, title: 'Supply Train', avatar: 'ST', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 20, title: 'Supply Ship', avatar: 'SS', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 21, title: 'Ship and Barge Lineup', avatar: 'SB', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
+  // { id: 22, title: 'Barge Lineup', avatar: 'BL', title: '', subheader: '', content: '', badge1: '', badge2: '', collapseTitle: '', collapseContent: '' },
 ]
