@@ -25,11 +25,7 @@ import MailIcon from '@material-ui/icons/Mail';
 
 const useStyles = makeStyles(theme => ({
   card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 0,
-    paddingTop: '56.25%', // 16:9
+    maxWidth: 345
   },
   expand: {
     transform: 'rotate(0deg)',
