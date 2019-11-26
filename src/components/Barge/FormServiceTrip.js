@@ -58,7 +58,7 @@ const currencies = [
 ];
 
 
-export default function ServiceTrip() {
+export default function FormServiceTrip() {
   const classes = useStyles();
   const [selectedDate, setSelectedDate] = React.useState(new Date())
   const [values, setValues] = useState({

@@ -35,7 +35,7 @@ function Apps() {
   return (
     <>
       {/* <CssBaseline /> */}
-      <Explorer />
+      <Barge />
     </>
   )
 }

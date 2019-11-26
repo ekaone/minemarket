@@ -1,11 +1,12 @@
 import React from 'react'
 
-import View from './View'
+// components units
+import SerciceTrip from './FormServiceTrip'
 
 function Barge() {
   return (
     <>
-      <View />
+      <SerciceTrip />
     </>
   )
 }
