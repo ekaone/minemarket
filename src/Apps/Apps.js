@@ -27,7 +27,8 @@ import {
   Reporting,
   ChartLine,
   Barge,
-  Explorer
+  Explorer,
+  Keyboard
 } from '../components'
 
 function Apps() {
