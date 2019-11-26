@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -12,6 +13,8 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
+import IconButton from '@material-ui/core/IconButton';
 
 const drawerWidth = 200;
 
@@ -36,6 +39,9 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.background.default,
     padding: theme.spacing(3),
   },
+  menuHome: {
+    marginRight: theme.spacing(2),
+  },
 }));
 
 export default function View() {
@@ -46,6 +52,14 @@ export default function View() {
       <CssBaseline />
       <AppBar position="fixed" className={classes.appBar}>
         <Toolbar>
+          <IconButton
+            edge="start"
+            className={classes.menuHome}
+            color="inherit"
+            aria-label="back home"
+          >
+            <HomeIcon />
+          </IconButton>
           <Typography variant="h6" noWrap>
             Barge
           </Typography>
