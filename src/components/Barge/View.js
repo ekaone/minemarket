@@ -18,12 +18,15 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
 import IconButton from '@material-ui/core/IconButton';
-// import Button from '@material-ui/core/Button';
+import CreateIcon from '@material-ui/icons/Create';
+import SearchIcon from '@material-ui/icons/Search';
+import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
+import InfoIcon from '@material-ui/icons/Info';
 
 import FormBarge from './FormBarge'
+import { BargeComponents } from './Data'
 
 const drawerWidth = 200;
-
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
@@ -71,9 +74,6 @@ const information = (
   </Typography>
 )
 
-
-
-
 export default function View() {
   const classes = useStyles();
 
@@ -82,7 +82,7 @@ export default function View() {
     switch (co) {
       case 'Barge':
         return setMenu('Barge component')
-      case 'New':
+      case 'Create':
         return setMenu(<FormBarge />)
       case 'Information':
         return setMenu(information)
@@ -93,6 +93,20 @@ export default function View() {
     }
   }
 
+  const setIcon = (icon) => {
+    switch (icon) {
+      case 'barge':
+        return <DirectionsBoatIcon style={{ color: 'blue' }} />
+      case 'search':
+        return <SearchIcon style={{ color: 'blue' }} />
+      case 'create':
+        return <CreateIcon style={{ color: 'blue' }} />
+      case 'information':
+        return <InfoIcon style={{ color: 'blue' }} />    
+      default:
+        return        
+    }
+  }
 
   return (
     <>
@@ -105,6 +119,7 @@ export default function View() {
             className={classes.menuHome}
             color="inherit"
             aria-label="back home"
+            href="/explorer"
           >
             <HomeIcon />
           </IconButton>
@@ -124,10 +139,15 @@ export default function View() {
         <div className={classes.toolbar} />
         <Divider />
         <List>
-          {['Barge', 'New', 'Information', 'Search'].map((text, index) => (
-            <ListItem button key={text} onClick={() => switchMenu(text)}>
-              <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <ListItemText primary={text} />
+          {BargeComponents.map((text, index) => (
+            <ListItem button key={text.id} onClick={() => switchMenu(text.name)}>
+              <ListItemIcon>
+                {
+                  // index % 2 === 0 ? <InboxIcon /> : <MailIcon />
+                  setIcon(text.icon)
+                }
+              </ListItemIcon>
+              <ListItemText primary={text.name} />
             </ListItem>
           ))}
         </List>
