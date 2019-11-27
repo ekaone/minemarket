@@ -74,7 +74,7 @@ export default function ExplorerAppBar() {
   let history = useHistory();
 
   const routeChange = () => {
-    let path = `/page-router`;
+    let path = `/`;
     history.push(path);
   }
 
@@ -87,8 +87,9 @@ export default function ExplorerAppBar() {
             className={classes.menuHome}
             color="inherit"
             aria-label="back home"
+            onClick={routeChange}
           >
-            <HomeIcon onClick={routeChange} />
+            <HomeIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Mine market Explorer
