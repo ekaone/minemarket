@@ -24,6 +24,7 @@ function Explorer() {
           DataExplorer.map(c => (
             <Grid key={c.id} item xs={6} sm={3}>
               <View 
+                link={c.path}
                 avatar={c.avatar}
                 title={c.title}
                 subheader={c.subheader}

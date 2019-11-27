@@ -44,8 +44,9 @@ function Apps() {
     <>
       {/* <CssBaseline /> */}
       <Router>
-        <Route exact path="/" component={Barge} />
+        <Route exact path="/" component={PageRouter} />
         <Route exact path="/explorer" component={Explorer} />
+        <Route exact path="/barge" component={Barge} />
       </Router>
     </>
   )

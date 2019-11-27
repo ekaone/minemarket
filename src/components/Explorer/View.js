@@ -57,9 +57,11 @@ export default function View(props) {
     <Card className={classes.card}>
       <CardHeader
         avatar={
-          <Avatar aria-label="recipe" className={classes.avatar}>
-            {props.avatar}
-          </Avatar>
+          <Link style={{ textDecoration: 'none' }} to={props.link}>
+            <Avatar aria-label="recipe" className={classes.avatar}>
+              {props.avatar}
+            </Avatar>
+          </Link>
         }
         action={
           <IconButton aria-label="settings">
