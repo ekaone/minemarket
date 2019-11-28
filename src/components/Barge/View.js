@@ -22,8 +22,10 @@ import CreateIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import InfoIcon from '@material-ui/icons/Info';
+import ExploreIcon from '@material-ui/icons/Explore';
 
 import FormBarge from './FormBarge'
+import Home from './Home'
 import { BargeComponents } from './Data'
 
 const drawerWidth = 200;
@@ -77,9 +79,11 @@ const information = (
 export default function View() {
   const classes = useStyles();
 
-  const [menu, setMenu] = useState(dashboard)
+  const [menu, setMenu] = useState(Home)
   const switchMenu = (co) => {
     switch (co) {
+      case 'Home':
+        return setMenu(<Home />)
       case 'Barge':
         return setMenu('Barge component')
       case 'Create':
@@ -95,6 +99,8 @@ export default function View() {
 
   const setIcon = (icon) => {
     switch (icon) {
+      case 'home':
+        return <HomeIcon color='primary' />
       case 'barge':
         return <DirectionsBoatIcon color='primary' />
       case 'search':
@@ -121,7 +127,7 @@ export default function View() {
             aria-label="back home"
             href="/explorer"
           >
-            <HomeIcon />
+            <ExploreIcon />
           </IconButton>
           <Typography variant="h6" noWrap>
             Barge
