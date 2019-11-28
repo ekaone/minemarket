@@ -4,6 +4,7 @@ import {
 } from "react-router-dom";
 
 import { makeStyles } from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import AppBar from '@material-ui/core/AppBar';
@@ -23,6 +24,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import InfoIcon from '@material-ui/icons/Info';
 import ExploreIcon from '@material-ui/icons/Explore';
+import Badge from '@material-ui/core/Badge';
 
 import FormBarge from './FormBarge'
 import Home from './Home'
@@ -55,20 +57,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-const dashboard = (
-  <Typography paragraph>
-    Dashboard - Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-    ut labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum
-    facilisis leo vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit
-    gravida rutrum quisque non tellus. Convallis convallis tellus id interdum velit laoreet id
-    donec ultrices. Odio morbi quis commodo odio aenean sed adipiscing. Amet nisl suscipit
-    adipiscing bibendum est ultricies integer quis. Cursus euismod quis viverra nibh cras.
-    Metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Mauris commodo quis
-    imperdiet massa tincidunt. Cras tincidunt lobortis feugiat vivamus at augue. At augue eget
-    arcu dictum varius duis at consectetur lorem. Velit sed ullamcorper morbi tincidunt. Lorem
-    donec massa sapien faucibus et molestie ac.
-  </Typography>
-)
+const StyledBadge1 = withStyles(theme => ({
+  badge: {
+    right: -3,
+    // border: `2px solid ${theme.palette.background.paper}`,
+    border: `2px solid rgb(169,169,169)`,
+    padding: '0 4px',
+  },
+}))(Badge);
 
 const information = (
   <Typography paragraph>
@@ -102,13 +98,21 @@ export default function View() {
       case 'home':
         return <HomeIcon color='primary' />
       case 'barge':
-        return <DirectionsBoatIcon color='primary' />
+        return (
+          <StyledBadge1 badgeContent={7} color="secondary">
+            <DirectionsBoatIcon color='primary' />
+          </StyledBadge1>
+        )
       case 'search':
         return <SearchIcon color='primary' />
       case 'create':
         return <CreateIcon color='primary' />
       case 'information':
-        return <InfoIcon color='primary' />    
+        return (
+          <Badge variant='dot' color="secondary">
+            <InfoIcon color='primary' /> 
+          </Badge>   
+        )
       default:
         return        
     }

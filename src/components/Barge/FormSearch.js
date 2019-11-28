@@ -54,7 +54,8 @@ export default function FormSearch() {
               <TextField 
                 style={{ width: 350 }} 
                 {...params} 
-                margin="dense" 
+                margin="dense"
+                placeholder='Search Barge Route' 
               />
             )}
           />
