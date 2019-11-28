@@ -52,7 +52,7 @@ export default function Configuration() {
       >
       <CardActions>
         <Button size="small" color="primary">
-          <Link to='/explorer'>Learn More</Link>
+          <Link to='/explorer' style={{ textDecoration: 'none' }}>Learn More</Link>
         </Button>
       </CardActions>
       </Grid>

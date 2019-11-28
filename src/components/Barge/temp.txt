@@ -1,0 +1,156 @@
+<div>
+              
+              <TextField
+                className={classes.margin}
+                label="Planned Product"
+                id="mui-theme-provider-standard-input"
+                value={values.plannedProduct}
+                onChange={handlerChange('plannedProduct')}
+              />
+              <TextField
+                className={classes.margin}
+                label="End Date"
+                id="mui-theme-provider-standard-input"
+                value={values.endDate}
+                onChange={handlerChange('endDate')}
+              />
+            </div>
+            <div>
+              <TextField
+                  className={classes.margin}
+                  label="Tug"
+                  id="mui-theme-provider-standard-input"
+                  value={values.tug}
+                  onChange={handlerChange('tug')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Despatch Order"
+                  id="mui-theme-provider-standard-input"
+                  value={values.despatchOrder}
+                  onChange={handlerChange('despatchOrder')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Shipment"
+                  id="mui-theme-provider-standard-input"
+                  value={values.shipment}
+                  onChange={handlerChange('shipment')}
+                />
+            </div>
+            <div>
+              <TextField
+                  className={classes.margin}
+                  label="Despatch Number"
+                  id="mui-theme-provider-standard-input"
+                  value={values.despatchNumber}
+                  onChange={handlerChange('despatchNumber')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Product"
+                  id="mui-theme-provider-standard-input"
+                  value={values.product}
+                  onChange={handlerChange('product')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Bulk Vessel"
+                  id="mui-theme-provider-standard-input"
+                  value={values.bulkVessel}
+                  onChange={handlerChange('bulkVessel')}
+                />
+            </div>
+            <div>
+              <TextField
+                  className={classes.margin}
+                  label="Captain"
+                  id="mui-theme-provider-standard-input"
+                  value={values.captain}
+                  onChange={handlerChange('captain')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Status"
+                  id="mui-theme-provider-standard-input"
+                  value={values.status}
+                  onChange={handlerChange('status')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Despatch Order 2"
+                  id="mui-theme-provider-standard-input"
+                  value={values.despatchOrder2}
+                  onChange={handlerChange('despatchOrder2')}
+                />
+            </div>
+            <div>
+              <TextField
+                  className={classes.margin}
+                  label="Chief Engineer"
+                  id="mui-theme-provider-standard-input"
+                  value={values.chiefEngineer}
+                  onChange={handlerChange('chiefEngineer')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Service Trip 2"
+                  id="mui-theme-provider-standard-input"
+                  value={values.serviceTrip2}
+                  onChange={handlerChange('serviceTrip2')}
+                />
+                <TextField
+                  className={classes.margin}
+                  label="Nominated Product"
+                  id="mui-theme-provider-standard-input"
+                  value={values.nominatedProduct}
+                  onChange={handlerChange('nominatedProduct')}
+                />
+            </div>
+            <div>
+              <TextField
+                id="standard-select-currency"
+                select
+                label="Currency"
+                className={classes.textField}
+                value={values.currency}
+                onChange={handlerChange('currency')}
+                SelectProps={{
+                  MenuProps: {
+                    className: classes.menu,
+                  },
+                }}
+                margin="normal"
+              >
+                {currencies.map(option => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+            </div>
+
+
+            <MuiPickersUtilsProvider utils={DateFnsUtils}>
+              <KeyboardDatePicker
+                margin="normal"
+                id="date-picker-dialog"
+                label="Start Date"
+                format="MM/dd/yyyy"
+                value={selectedDate}
+                onChange={handleDateChange}
+                KeyboardButtonProps={{
+                  'aria-label': 'change date',
+                }}
+              />
+              <KeyboardTimePicker
+                margin="normal"
+                id="time-picker"
+                label="Start Time"
+                value={selectedDate}
+                onChange={handleDateChange}
+                KeyboardButtonProps={{
+                  'aria-label': 'change time',
+                }}
+              />
+            </MuiPickersUtilsProvider>

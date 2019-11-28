@@ -96,13 +96,13 @@ export default function View() {
   const setIcon = (icon) => {
     switch (icon) {
       case 'barge':
-        return <DirectionsBoatIcon style={{ color: 'blue' }} />
+        return <DirectionsBoatIcon color='primary' />
       case 'search':
-        return <SearchIcon style={{ color: 'blue' }} />
+        return <SearchIcon color='primary' />
       case 'create':
-        return <CreateIcon style={{ color: 'blue' }} />
+        return <CreateIcon color='primary' />
       case 'information':
-        return <InfoIcon style={{ color: 'blue' }} />    
+        return <InfoIcon color='primary' />    
       default:
         return        
     }
@@ -136,16 +136,12 @@ export default function View() {
         }}
         anchor="left"
       >
-        <div className={classes.toolbar} />
-        <Divider />
+        {/* <div className={classes.toolbar} /> */}
         <List>
           {BargeComponents.map((text, index) => (
             <ListItem button key={text.id} onClick={() => switchMenu(text.name)}>
               <ListItemIcon>
-                {
-                  // index % 2 === 0 ? <InboxIcon /> : <MailIcon />
-                  setIcon(text.icon)
-                }
+                {setIcon(text.icon)}
               </ListItemIcon>
               <ListItemText primary={text.name} />
             </ListItem>
