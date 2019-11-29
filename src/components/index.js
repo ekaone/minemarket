@@ -13,6 +13,8 @@ export { default as Barge } from './Barge'
 export { default as Explorer } from './Explorer'
 export { default as Keyboard } from './Keyboard'
 export { default as Helpers } from './Helpers'
+export { default as Invoices } from './Invoices'
+export { default as Payment } from './Payment'
 
 // avatar
 export { MarryDoe } from './Profiles'

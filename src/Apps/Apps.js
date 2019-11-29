@@ -36,7 +36,9 @@ import {
   Barge,
   Explorer,
   Keyboard,
-  Helpers
+  Helpers,
+  Invoices,
+  Payment
 } from '../components'
 
 function Apps() {
@@ -47,6 +49,8 @@ function Apps() {
         <Route exact path="/" component={PageRouter} />
         <Route exact path="/explorer" component={Explorer} />
         <Route exact path="/barge" component={Barge} />
+        <Route exact path="/invoices" component={Invoices} />
+        <Route exact path="/payment" component={Payment} />
       </Router>
     </>
   )
