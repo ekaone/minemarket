@@ -9,6 +9,7 @@ import ListItemAvatar from '@material-ui/core/ListItemAvatar';
 import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
 import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
 import Paper from '@material-ui/core/Paper';
+import Typography from '@material-ui/core/Typography';
 
 import { Currency } from './Data'
 
@@ -30,6 +31,9 @@ export default function CurrencyInfo() {
 
   return (
     <>
+    <Typography gutterBottom variant='h5'>
+        Currency
+      </Typography>
     <Paper className={classes.paper}>
       <List dense className={classes.root}>
         {Currency.map((value, index) => {
