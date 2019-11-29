@@ -9,6 +9,6 @@ export const Currency = [
 export const MenuItems = [
   { id: 1, name: 'Home', icon: 'home' },
   { id: 2, name: 'Create', icon: 'create' },
-  { id: 3, name: 'Information', icon: 'information' },
+  { id: 3, name: 'Finance', icon: 'finance' },
   { id: 4, name: 'Search', icon: 'search' },
 ]

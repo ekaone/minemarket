@@ -18,12 +18,13 @@ import HomeIcon from '@material-ui/icons/Home';
 import IconButton from '@material-ui/core/IconButton';
 import CreateIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
-import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import InfoIcon from '@material-ui/icons/Info';
 import ExploreIcon from '@material-ui/icons/Explore';
 import Badge from '@material-ui/core/Badge';
+import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
 
 import { MenuItems } from './Data'
+import Finance from './Finance'
 
 const drawerWidth = 200;
 const useStyles = makeStyles(theme => ({
@@ -73,8 +74,8 @@ export default function View() {
         return setMenu('Barge component')
       case 'Create':
         return setMenu('Create payment')
-      case 'Information':
-        return setMenu('Information')
+      case 'Finance':
+        return setMenu(<Finance />)
       case 'Search':
           return setMenu('Search component')
       default:
@@ -86,10 +87,10 @@ export default function View() {
     switch (icon) {
       case 'home':
         return <HomeIcon color='primary' />
-      case 'information':
+      case 'finance':
         return (
           <StyledBadge1 badgeContent={7} color="secondary">
-            <DirectionsBoatIcon color='primary' />
+            <MonetizationOnIcon color='primary' />
           </StyledBadge1>
         )
       case 'create':
@@ -97,7 +98,7 @@ export default function View() {
       case 'search':
         return (
           <Badge variant='dot' color="secondary">
-            <InfoIcon color='primary' /> 
+            <SearchIcon color='primary' /> 
           </Badge>   
         )
       default:
