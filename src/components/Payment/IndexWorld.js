@@ -2,11 +2,14 @@ import React from 'react';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import ArrowDropUpIcon from '@material-ui/icons/ArrowDropUp';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 
 const useStyles = makeStyles(theme => ({
   paper: {
@@ -41,6 +44,15 @@ export default function IndexWorld() {
       </Typography>
       <Paper className={classes.paper}>
         <Table className={classes.table} size="small" aria-label="a dense table">
+        <TableHead>
+            <TableRow>
+              <TableCell></TableCell>
+              <TableCell align="right"><ArrowDropDownIcon style={{ color: 'red' }} /></TableCell>
+              <TableCell align="right"></TableCell>
+              <TableCell align="right"><ArrowDropUpIcon style={{ color: 'green' }}/></TableCell>
+              <TableCell align="right"></TableCell>
+            </TableRow>
+          </TableHead>
           <TableBody>
             {rows.map(row => (
               <TableRow key={row.name}>
