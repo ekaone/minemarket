@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+//@material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -12,6 +13,9 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import Badge from '@material-ui/core/Badge';
+
+//@material-ui/icons
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
@@ -19,11 +23,24 @@ import IconButton from '@material-ui/core/IconButton';
 import CreateIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
 import ExploreIcon from '@material-ui/icons/Explore';
-import Badge from '@material-ui/core/Badge';
 import MonetizationOnIcon from '@material-ui/icons/MonetizationOn';
+import MoneyIcon from '@material-ui/icons/Money';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import RowingIcon from '@material-ui/icons/Rowing';
+import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
+import MoneyOffIcon from '@material-ui/icons/MoneyOff';
+import CreditCardIcon from '@material-ui/icons/CreditCard';
 
+// components units
 import { MenuItems } from './Data'
-import Finance from './Finance'
+import Demurrage from './Demurrage'
+import Freight from './Freight'
+import FreightDemurrage from './FreightDemurrage'
+import Purchase from './Purchase'
+import Sales from './Sales'
+import Service from './Service'
+import ServiceDemurrage from './ServiceDemurrage'
+import CreditDebit from './CreditDebit'
 
 const drawerWidth = 200;
 const useStyles = makeStyles(theme => ({
@@ -69,14 +86,22 @@ export default function View() {
     switch (co) {
       case 'Home':
         return setMenu('Home')
-      case 'Barge':
-        return setMenu('Barge component')
-      case 'Create':
-        return setMenu('Create payment')
-      case 'Finance':
-        return setMenu(<Finance />)
-      case 'Search':
-          return setMenu('Search component')
+      case 'Sales':
+        return setMenu(<Sales />)
+      case 'Purchase':
+        return setMenu(<Purchase />)
+      case 'Service':
+        return setMenu(<Service />)
+      case 'Freight':
+        return setMenu(<Freight />)
+      case 'Demurrage':
+        return setMenu(<Demurrage />)
+      case 'FreightDemurrage':
+        return setMenu(<FreightDemurrage />)
+      case 'ServiceDemurrage':
+        return setMenu(<ServiceDemurrage />)
+      case 'CreditDebit':
+        return setMenu(<CreditDebit />)
       default:
         return 'Default'
     }
@@ -86,20 +111,20 @@ export default function View() {
     switch (icon) {
       case 'home':
         return <HomeIcon color='primary' />
-      case 'finance':
-        return (
-          <StyledBadge1 badgeContent={7} color="secondary">
-            <MonetizationOnIcon color='primary' />
-          </StyledBadge1>
-        )
-      case 'create':
-        return <CreateIcon color='primary' />
-      case 'search':
-        return (
-          <Badge variant='dot' color="secondary">
-            <SearchIcon color='primary' /> 
-          </Badge>   
-        )
+      case 'sales':
+        return <MoneyIcon color='primary' />
+      case 'purchase':
+        return <ShoppingCartIcon color='primary' />
+      case 'service':
+         return <RowingIcon color='primary' /> 
+      case 'freight':
+        return <DirectionsBoatIcon color='primary' />
+      case 'demurrage':
+        return <MonetizationOnIcon color='primary' />
+      case 'freightdemurrage':
+        return <MoneyOffIcon color='primary' />
+      case 'servicedemurrage':
+        return <CreditCardIcon color='primary' />
       default:
         return        
     }
