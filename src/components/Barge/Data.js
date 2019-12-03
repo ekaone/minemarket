@@ -4,4 +4,5 @@ export const BargeComponents = [
   { id: 3, name: 'Create', icon: 'create' },
   { id: 4, name: 'Information', icon: 'information' },
   { id: 5, name: 'Search', icon: 'search' },
+  { id: 6, name: 'Map', icon: 'map' },
 ]

@@ -3,6 +3,7 @@ import {
   Link
 } from "react-router-dom";
 
+//@material-ui/core
 import { makeStyles } from '@material-ui/core/styles';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -15,20 +16,25 @@ import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
+import IconButton from '@material-ui/core/IconButton';
+import Badge from '@material-ui/core/Badge';
+
+// @material-ui/icons
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import HomeIcon from '@material-ui/icons/Home';
-import IconButton from '@material-ui/core/IconButton';
 import CreateIcon from '@material-ui/icons/Create';
 import SearchIcon from '@material-ui/icons/Search';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 import InfoIcon from '@material-ui/icons/Info';
 import ExploreIcon from '@material-ui/icons/Explore';
-import Badge from '@material-ui/core/Badge';
+import RoomIcon from '@material-ui/icons/Room';
 
+// @modules
 import FormBarge from './FormBarge'
 import Home from './Home'
 import { BargeComponents } from './Data'
+import BargeMap from './BargeMap'
 
 const drawerWidth = 200;
 const useStyles = makeStyles(theme => ({
@@ -88,6 +94,8 @@ export default function View() {
         return setMenu(information)
       case 'Search':
           return setMenu('Search component')
+      case 'Map':
+        return setMenu(<BargeMap />)
       default:
         return 'Default'
     }
@@ -113,6 +121,8 @@ export default function View() {
             <InfoIcon color='primary' /> 
           </Badge>   
         )
+      case 'map':
+        return <RoomIcon color='primary' />
       default:
         return        
     }
